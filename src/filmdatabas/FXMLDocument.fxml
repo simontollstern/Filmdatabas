@@ -1,18 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="1024.0" styleClass="bgMain" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1">
+<Pane fx:id="parentPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="1024.0" styleClass="bg" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="filmdatabas.FXMLDocumentController">
    <children>
-      <Pane prefHeight="576.0" prefWidth="200.0" styleClass="sidebar">
+      <Pane prefHeight="576.0" prefWidth="200.0" styleClass="bg">
          <children>
-            <Label layoutX="17.0" text="movieDB" textFill="#ffff8f">
+            <Label layoutX="15.0" layoutY="7.0" text="movieDB" textFill="#ffff8f">
                <font>
-                  <Font size="42.0" />
+                  <Font name="System Bold" size="40.0" />
                </font>
             </Label>
-         </children></Pane>
+            <Button fx:id="bgBtn" layoutY="80.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" styleClass="bgBtn" text="+ Lägg till film.." textFill="#ffff8f">
+               <font>
+                  <Font name="System Italic" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="bgBtn1" layoutY="124.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" styleClass="bgBtn" text="- Ta bort film.." textFill="#ffff8f">
+               <font>
+                  <Font name="System Italic" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Pane layoutX="200.0" layoutY="362.0" prefHeight="210.0" prefWidth="820.0" styleClass="descPane" />
+      <TableView layoutX="200.0" layoutY="4.0" prefHeight="354.0" prefWidth="820.0" styleClass="tableBg">
+        <columns>
+          <TableColumn maxWidth="268.0" minWidth="268.0" prefWidth="268.0" resizable="false" styleClass="tableCol" text="Titel" />
+          <TableColumn maxWidth="150.0" minWidth="150.0" prefWidth="150.0" resizable="false" styleClass="tableCol" text="Genre" />
+            <TableColumn maxWidth="200.0" minWidth="200.0" prefWidth="200.0" resizable="false" styleClass="tableCol" text="Regissör" />
+            <TableColumn maxWidth="100.0" minWidth="100.0" prefWidth="100.0" resizable="false" styleClass="tableCol" text="Omdöme" />
+            <TableColumn maxWidth="100.0" minWidth="100.0" prefWidth="100.0" resizable="false" styleClass="tableCol" text="imdb-omdöme" />
+        </columns>
+      </TableView>
    </children>
 </Pane>

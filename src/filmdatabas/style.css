@@ -1,7 +1,64 @@
-.bgMain{
+.listPane{
     -fx-background-color: #ffff8f;
 }
 
-.sidebar{
+.bg{
     -fx-background-color: #333;
+}
+
+.bgBtn{
+    -fx-background-color: #444;
+    -fx-background-radius: 0;
+}
+
+.bgBtn:hover{
+    -fx-background-color: #ffff8f;
+    -fx-background-radius: 0;
+    -fx-text-fill: #333;
+
+}
+
+.bgBtn:pressed{
+    -fx-background-color: #ffff8f;
+    -fx-background-radius: 0;
+    -fx-text-fill: #fff;
+}
+
+.descPane{
+    -fx-background-color: #444;
+}
+
+#formPane{
+    -fx-background-color: #333;
+}
+
+#formPane Label{
+    -fx-text-fill: #ffff8f;
+    -fx-font: 14 System;
+}
+
+.thumb{
+    -fx-background-color: #333;
+    -fx-background-insets: 2, 0, 0;
+    -fx-background-radius: 2em;
+
+}
+
+.track{
+    -fx-background-color:transparent;
+    -fx-border-color:transparent;
+    -fx-background-radius: 0em;
+    -fx-border-radius: 2em;
+}
+
+.increment-button, .decrement-button{
+    -fx-background-color:transparent;
+    -fx-background-radius: 0em;
+    -fx-padding: 0 10 0 0;
+
+}
+
+.increment-arrow, .decrement-arrow{
+    -fx-shape: " ";
+    -fx-padding: 0;
 }
