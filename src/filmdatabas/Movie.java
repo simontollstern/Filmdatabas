@@ -5,8 +5,8 @@
  */
 package filmdatabas;
 
-import javafx.beans.property.IntegerProperty;
-import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.FloatProperty;
+import javafx.beans.property.SimpleFloatProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
@@ -19,15 +19,15 @@ public class Movie {
     private final SimpleStringProperty title;
     private final SimpleStringProperty genre;
     private final SimpleStringProperty director;
-    private final SimpleIntegerProperty rating;
-    private final SimpleIntegerProperty imdb_rating;
+    private final SimpleFloatProperty rating;
+    private final SimpleFloatProperty imdb_rating;
 
-    public Movie(String title, String genre, String director, int rating, int imdb_rating) {
+    public Movie(String title, String genre, String director, float rating, float imdb_rating) {
         this.title = new SimpleStringProperty(title);
         this.genre = new SimpleStringProperty(genre);
         this.director = new SimpleStringProperty(director);
-        this.rating = new SimpleIntegerProperty(rating);
-        this.imdb_rating = new SimpleIntegerProperty(imdb_rating);
+        this.rating = new SimpleFloatProperty(rating);
+        this.imdb_rating = new SimpleFloatProperty(imdb_rating);
     }
     
     //GETTERS
@@ -43,11 +43,11 @@ public class Movie {
         return director.get();
     }
 
-    public Integer getRating() {
+    public float getRating() {
         return rating.get();
     }
 
-    public Integer getImdb_rating() {
+    public float getImdb_rating() {
         return imdb_rating.get();
     }
     
@@ -64,11 +64,11 @@ public class Movie {
         director.set(value);
     }
     
-    public void setRating(Integer value) {
+    public void setRating(float value) {
         rating.set(value);
     }
     
-    public void setimdb_rating(Integer value) {
+    public void setimdb_rating(float value) {
         imdb_rating.set(value);
     }
     
@@ -85,11 +85,11 @@ public class Movie {
         return director;
     }
     
-    public IntegerProperty ratingProperty() {
+    public FloatProperty ratingProperty() {
         return rating;
     }
 
-    public IntegerProperty imdb_ratingProperty() {
+    public FloatProperty imdb_ratingProperty() {
         return imdb_rating;
     } 
 }

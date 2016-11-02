@@ -24,7 +24,7 @@
     -fx-text-fill: #fff;
 }
 
-.descPane{
+.addMoviePane{
     -fx-background-color: #444;
 }
 
@@ -69,23 +69,33 @@
 }
 
 .table-row-cell:hover{
-    -fx-background-color: #4a4a4a;
-}
-
-.table-row-cell:pressed{
     -fx-background-color: #555;
 }
 
+.table-row-cell:focused{
+    -fx-background-color: #ffff8f;
+    -fx-table-cell-border-color: transparent;
+}
+
+.table-row-cell:focused .text{
+    -fx-fill: #333;
+}
+
+.table-row-cell .text{
+    -fx-fill: #ffff8f;
+}
+
 .table-row-cell:odd{
-    -fx-background-color: #333;
+    -fx-background-color: #3c3c3c;
 }
 
 .table-row-cell:odd:hover{
-    -fx-background-color: #3a3a3a;
+    -fx-background-color: #555;
 }
 
-.table-row-cell:odd:pressed{
-    -fx-background-color: #444;
+.table-row-cell:odd:focused{
+    -fx-background-color: #ffff8f;
+    -fx-table-cell-border-color: transparent;
 }
 
 .table-view .column-header-background{

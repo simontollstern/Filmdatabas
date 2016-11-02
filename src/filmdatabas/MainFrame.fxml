@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane fx:id="parentPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="1024.0" styleClass="bg" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="filmdatabas.FXMLDocumentController">
+<Pane fx:id="parentPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="1024.0" styleClass="bg" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="filmdatabas.MainFrameController">
    <children>
       <Pane prefHeight="576.0" prefWidth="200.0" styleClass="bg">
          <children>
@@ -16,27 +16,24 @@
                   <Font name="System Bold" size="40.0" />
                </font>
             </Label>
-            <Button fx:id="bgBtn" layoutY="80.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" styleClass="bgBtn" text="+ Lägg till film.." textFill="#ffff8f">
+            <Button fx:id="addBtn" layoutX="4.0" layoutY="81.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="192.0" styleClass="bgBtn" text="Lägg till film" textFill="#ffff8f">
                <font>
-                  <Font name="System Italic" size="18.0" />
+                  <Font name="System Italic" size="16.0" />
                </font>
             </Button>
-            <Button fx:id="bgBtn1" layoutY="124.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" styleClass="bgBtn" text="- Ta bort film.." textFill="#ffff8f">
+            <Button fx:id="editBtn" layoutX="4.0" layoutY="125.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="192.0" styleClass="bgBtn" text="Ändra markerad film" textFill="#ffff8f">
                <font>
-                  <Font name="System Italic" size="18.0" />
+                  <Font name="System Italic" size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="deleteBtn" layoutX="4.0" layoutY="169.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="192.0" styleClass="bgBtn" text="Ta bort markerad film" textFill="#ffff8f">
+               <font>
+                  <Font name="System Italic" size="16.0" />
                </font>
             </Button>
          </children>
       </Pane>
-      <Pane layoutX="200.0" layoutY="362.0" prefHeight="210.0" prefWidth="820.0" styleClass="descPane">
-         <children>
-            <Label layoutX="140.0" layoutY="69.0" text="INGEN FILM MARKERAD" textFill="#333333">
-               <font>
-                  <Font size="50.0" />
-               </font>
-            </Label>
-         </children></Pane>
-      <TableView fx:id="tableID" layoutX="200.0" layoutY="4.0" prefHeight="354.0" prefWidth="820.0" styleClass="tableBg">
+      <TableView fx:id="tableID" layoutX="200.0" layoutY="4.0" prefHeight="568.0" prefWidth="820.0" styleClass="tableBg">
         <columns>
           <TableColumn fx:id="title" maxWidth="268.0" minWidth="268.0" prefWidth="268.0" resizable="false" styleClass="tableCol" text="Titel" />
           <TableColumn fx:id="genre" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" resizable="false" styleClass="tableCol" text="Genre" />

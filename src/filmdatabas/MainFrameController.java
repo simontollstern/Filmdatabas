@@ -16,7 +16,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.Pane;
 
-public class FXMLDocumentController implements Initializable {
+public class MainFrameController implements Initializable {
 
     @FXML
     private TableView<Movie> tableID;
@@ -33,15 +33,18 @@ public class FXMLDocumentController implements Initializable {
     private TableColumn<Movie, Integer> imdb_rating;
 
     ObservableList<Movie> data;
-    
-    public String selectedMovieTitle;
-    public String selectedMovieDescription;
 
     @FXML
     Pane parentPane;
 
     @FXML
-    Button bgBtn;
+    Button addBtn;
+
+    @FXML
+    Button editBtn;
+
+    @FXML
+    Button deleteBtn;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -56,10 +59,10 @@ public class FXMLDocumentController implements Initializable {
             while (rs.next()) {
                 data.add(new Movie(
                         rs.getString(1),
-                        rs.getString(4),
                         rs.getString(3),
+                        rs.getString(2),
                         rs.getInt(5),
-                        rs.getInt(6))
+                        rs.getInt(4))
                 );
             }
         } catch (SQLException ex) {
@@ -74,22 +77,30 @@ public class FXMLDocumentController implements Initializable {
         tableID.setItems(null);
 
         tableID.setItems(data);
-        
-        DetailBox display = new DetailBox();
 
-        tableID.setOnMousePressed((event) -> {
-            parentPane.getChildren().remove(display);
-            
-            Movie selectedMovie = tableID.getSelectionModel().getSelectedItem();
-            selectedMovieTitle = selectedMovie.getTitle();
-            
-            parentPane.getChildren().add(display);
+        addBtn.setOnAction((event) -> {
+
         });
 
-        Form inputForm = new Form();
+        editBtn.setOnAction((event) -> {
 
-        bgBtn.setOnAction((event) -> {
-            parentPane.getChildren().add(inputForm);
+        });
+
+        deleteBtn.setOnAction((event) -> {
+            Movie movie = tableID.getSelectionModel().getSelectedItem();
+            System.out.println(movie.getTitle());
+            tableID.getItems().remove(movie);
+
+            try {
+                Connection conn = ConnectionFactory.getConnection();
+                Statement stmt = conn.createStatement();
+                String sql = "DELETE FROM movies WHERE name='"+movie.getTitle()+"'";
+
+                stmt.executeUpdate(sql);
+                
+            } catch (SQLException ex) {
+                System.out.println("DATABASE ERROR");
+            }
         });
     }
 }
