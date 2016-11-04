@@ -26,5 +26,4 @@ public class Filmdatabas extends Application {
     public static void main(String[] args) {
         launch(args);
     }
-
 }

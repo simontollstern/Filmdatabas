@@ -6,22 +6,28 @@
     -fx-background-color: #333;
 }
 
-.bgBtn{
+.bgLight{
     -fx-background-color: #444;
+}
+
+.addBtn{
+    -fx-background-color: darkgreen;
     -fx-background-radius: 0;
 }
 
-.bgBtn:hover{
-    -fx-background-color: #ffff8f;
+.addBtn:hover{
+    -fx-background-color: green;
     -fx-background-radius: 0;
-    -fx-text-fill: #333;
-
 }
 
-.bgBtn:pressed{
-    -fx-background-color: #ffff8f;
+.deleteBtn{
+    -fx-background-color: darkred;
     -fx-background-radius: 0;
-    -fx-text-fill: #fff;
+}
+
+.deleteBtn:hover{
+    -fx-background-color: red;
+    -fx-background-radius: 0;
 }
 
 .addMoviePane{

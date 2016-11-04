@@ -5,8 +5,6 @@
  */
 package filmdatabas;
 
-import javafx.beans.property.FloatProperty;
-import javafx.beans.property.SimpleFloatProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
@@ -19,15 +17,15 @@ public class Movie {
     private final SimpleStringProperty title;
     private final SimpleStringProperty genre;
     private final SimpleStringProperty director;
-    private final SimpleFloatProperty rating;
-    private final SimpleFloatProperty imdb_rating;
+    private final SimpleStringProperty rating;
+    private final SimpleStringProperty imdb_rating;
 
-    public Movie(String title, String genre, String director, float rating, float imdb_rating) {
+    public Movie(String title, String genre, String director, String rating, String imdb_rating) {
         this.title = new SimpleStringProperty(title);
         this.genre = new SimpleStringProperty(genre);
         this.director = new SimpleStringProperty(director);
-        this.rating = new SimpleFloatProperty(rating);
-        this.imdb_rating = new SimpleFloatProperty(imdb_rating);
+        this.rating = new SimpleStringProperty(rating);
+        this.imdb_rating = new SimpleStringProperty(imdb_rating);
     }
     
     //GETTERS
@@ -43,11 +41,11 @@ public class Movie {
         return director.get();
     }
 
-    public float getRating() {
+    public String getRating() {
         return rating.get();
     }
 
-    public float getImdb_rating() {
+    public String getImdb_rating() {
         return imdb_rating.get();
     }
     
@@ -64,11 +62,11 @@ public class Movie {
         director.set(value);
     }
     
-    public void setRating(float value) {
+    public void setRating(String value) {
         rating.set(value);
     }
     
-    public void setimdb_rating(float value) {
+    public void setimdb_rating(String value) {
         imdb_rating.set(value);
     }
     
@@ -85,11 +83,11 @@ public class Movie {
         return director;
     }
     
-    public FloatProperty ratingProperty() {
+    public StringProperty ratingProperty() {
         return rating;
     }
 
-    public FloatProperty imdb_ratingProperty() {
+    public StringProperty imdb_ratingProperty() {
         return imdb_rating;
     } 
 }
