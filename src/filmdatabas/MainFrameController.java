@@ -43,7 +43,7 @@ public class MainFrameController implements Initializable {
     private TableColumn<Movie, Integer> imdb_rating;
 
     @FXML
-    Button addBtn;
+    private Button addBtn;
 
     @FXML
     private TextField titleField;
@@ -63,7 +63,7 @@ public class MainFrameController implements Initializable {
     private ChoiceBox imdbRatingBox2;
 
     @FXML
-    Button deleteBtn;
+    private Button deleteBtn;
     //</editor-fold>
 
     @Override
