@@ -1,17 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package filmdatabas;
 
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
-/**
- *
- * @author Simon Tollstern
- */
 public class Movie {
 
     private final SimpleStringProperty title;
@@ -28,7 +19,7 @@ public class Movie {
         this.imdb_rating = new SimpleStringProperty(imdb_rating);
     }
     
-    //GETTERS
+    //<editor-fold desc="GETTERS">
     public String getTitle() {
         return title.get();
     }
@@ -48,8 +39,9 @@ public class Movie {
     public String getImdb_rating() {
         return imdb_rating.get();
     }
+    //</editor-fold>
     
-    //SETTERS
+    //<editor-fold desc="SETTERS">
     public void setTitle(String value) {
         title.set(value);
     }
@@ -69,8 +61,9 @@ public class Movie {
     public void setimdb_rating(String value) {
         imdb_rating.set(value);
     }
+    //</editor-fold>
     
-    //STRING PROPERTIES
+    //<editor-fold desc="STRING PROPERTIES">
     public StringProperty titleProperty() {
         return title;
     }
@@ -89,5 +82,6 @@ public class Movie {
 
     public StringProperty imdb_ratingProperty() {
         return imdb_rating;
-    } 
+    }
+    //</editor-fold>
 }
