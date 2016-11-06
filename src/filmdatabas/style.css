@@ -1,15 +1,8 @@
-.listPane{
-    -fx-background-color: #ffff8f;
-}
-
-.bg{
-    -fx-background-color: #333;
-}
-
 .bgLight{
     -fx-background-color: #444;
 }
 
+/*<editor-fold desc="BUTTONS">*/
 .addBtn{
     -fx-background-color: darkgreen;
     -fx-background-radius: 0;
@@ -29,28 +22,9 @@
     -fx-background-color: red;
     -fx-background-radius: 0;
 }
+/*</editor-fold>*/
 
-.addMoviePane{
-    -fx-background-color: #444;
-}
-
-#formPane{
-    -fx-background-color: #333;
-}
-
-#formPane Label{
-    -fx-text-fill: #ffff8f;
-    -fx-font: 14 System;
-}
-
-#detailBox{
-    -fx-background-color: #444;
-}
-
-#detailBox Label{
-    -fx-text-fill: #ffff8f;
-}
-
+/*<editor-fold desc="TABLE">*/
 .table-view{
     -fx-background-color: transparent;
     -fx-table-cell-border-color: transparent;
@@ -116,6 +90,9 @@
 .table-view .column-header {
     -fx-background-color: transparent;
 }
+/*</editor-fold>*/
+
+/*<editor-fold desc="SCROLL">*/
 
 .thumb{
     -fx-background-color: #ffff8f;
@@ -142,3 +119,4 @@
     -fx-shape: " ";
     -fx-padding: 0;
 }
+/*</editor-fold>*/

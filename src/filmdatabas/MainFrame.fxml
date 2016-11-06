@@ -88,7 +88,7 @@
             </Pane>
          </children>
       </Pane>
-      <TableView fx:id="table" layoutX="199.0" prefHeight="576.0" prefWidth="825.0" styleClass="tableBg">
+      <TableView fx:id="table" layoutX="199.0" prefHeight="576.0" prefWidth="825.0">
         <columns>
           <TableColumn fx:id="title" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" resizable="false" styleClass="tableCol" text="Titel" />
           <TableColumn fx:id="genre" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" resizable="false" styleClass="tableCol" text="Genre" />
